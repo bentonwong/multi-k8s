@@ -20,7 +20,6 @@
       "image": "bentonwong/multi-worker",
       "hostname": "worker",
       "essential": false,
-      "memory":,
       "memory": 128
     },
     {
@@ -35,7 +34,7 @@
         }
       ],
       "links": ["client", "server"],
-      "memory": 128,
+      "memory": 128
     }
   ]
 }
