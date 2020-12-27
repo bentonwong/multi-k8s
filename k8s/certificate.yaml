@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: ireallydontwanttodothisrightnow-com-tls
+spec:
+  secretName: ireallydontwanttodothisrightnow-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: ireallydontwanttodothisrightnow.com
+  dnsNames:
+    - ireallydontwanttodothisrightnow.com
+    - www.ireallydontwanttodothisrightnow.com
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - ireallydontwanttodothisrightnow.com
+          - www.ireallydontwanttodothisrightnow.com
