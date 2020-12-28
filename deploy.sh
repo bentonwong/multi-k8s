@@ -1,6 +1,7 @@
 docker build -t bentonwong/multi-client:latest -t bentonwong/multi-client:$SHA -f ./client/Dockerfile ./client
 docker build -t bentonwong/multi-server:latest -t bentonwong/multi-server:$SHA -f ./server/Dockerfile ./server
 docker build -t bentonwong/multi-worker:latest -t bentonwong/multi-worker:$SHA -f ./worker/Dockerfile ./worker
+
 docker push bentonwong/multi-client:latest
 docker push bentonwong/multi-server:latest
 docker push bentonwong/multi-worker:latest
